@@ -1,0 +1,60 @@
+.logo-name__header {
+  text-decoration: none;
+  color: var(--primary-black-color);
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.logo-name__footer {
+  color: var(--primary-white-color);
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.logo-name {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  transition: color 250ms var(--time-func);
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+.logo-web {
+  color: var(--accent-color);
+}
+.logo-mobmenu-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+
+  &:hover .icon-close,
+  &:hover .icon-menu &:focus .icon-close,
+  &:focus .icon-menu {
+    fill: $link-color;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.menu .icon-close {
+  display: none;
+}
+.menu.is-open .icon-close {
+  display: block;
+}
+.menu.is-open .icon-menu {
+  display: none;
+}

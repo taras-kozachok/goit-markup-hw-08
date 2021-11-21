@@ -1,0 +1,42 @@
+/* section clients */
+.section-clients {
+  background-color: var(--primary-white-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.clients-icon {
+  fill: currentColor;
+  transition: fill 250ms var(--time-func);
+}
+
+.list-clients {
+  display: flex;
+}
+
+.clients-icon-background {
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0pc;
+  }
+}
+
+.item-box {
+  color: #afb1b8;
+  display: flex;
+  height: 92px;
+  width: 170px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 250ms var(--time-func);
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
+}
+
+.item-box:focus .clients-icon,
+.item-box:hover .clients-icon {
+  fill: var(--accent-color);
+}
