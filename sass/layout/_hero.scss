@@ -1,30 +1,91 @@
 /* Hero */
 .hero {
   background: var(--footer-bcg-color);
-  padding-top: 200px;
-  padding-bottom: 200px;
-  max-width: 1600px;
-  height: 600px;
+  padding: 118px 0;
+  max-width: 480px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/hero.jpg);
+    url('../../images/hero/hero_img_m.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../../images/hero/hero_img_m@2x.jpg');
+  }
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../../images/hero/hero_img_t.jpg');
+    max-width: 768px;
+    height: 400px;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../../images/hero/hero_img_t@2x.jpg');
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../../images/hero/hero_img_d.jpg');
+    max-width: 1600px;
+    height: 600px;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../../images/hero/hero_img_d@2x.jpg');
+    }
+    padding: 200px 0;
+  }
 }
 .hero-title {
-  color: var(--primary-white-color);
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
-  width: 696px;
-  margin: 0 auto;
+  text-align: center;
+  color: var(--primary-white-color);
+  font-style: normal;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.6153;
   margin-bottom: 30px;
+  letter-spacing: 0.06em;
+  @media screen and(min-width:1200px) {
+    font-size: 44px;
+    line-height: 1.364;
+  }
+  // font-weight: 900;
+  // font-size: 44px;
+  // line-height: 1.36;
+  // text-align: center;
+  // letter-spacing: 0.06em;
+  // text-transform: uppercase;
+  // width: 696px;
+  // margin: 0 auto;
+  // margin-bottom: 30px;
+  // @media screen and (min-width: 1200px) {
+  //   font-size: 44px;
+  //   line-height: 1.36;
+  // }
 }

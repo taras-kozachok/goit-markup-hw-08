@@ -2,30 +2,73 @@
 
 .header {
   border-bottom: 1px solid#ececec;
+  position: relative;
+  @media screen and (max-width: 767px) {
+    padding: 16px 0;
+  }
 }
 
-.header__nav {
+.header-nav__cont {
   display: flex;
   align-items: center;
+}
+.header-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+  @media screen and (min-width: 768px) {
+    margin-right: 50px;
+    margin-bottom: 0px;
+  }
+}
+.header-menu__item {
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .header__container {
-  display: flex;
-  align-items: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+
+    align-items: center;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
-.header-menu__item:not(:last-child) {
-  margin-right: 50px;
+.connect-item {
+  margin-bottom: 32px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
+  }
+}
+.connect-item:not(:last-child) {
+  @media screen and (min-width: 768px) {
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 50px;
+    margin-bottom: 0;
+  }
 }
 .header__nav {
-  display: flex;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
   & .link {
+    font-size: 40px;
     color: var(--title-text-color);
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    line-height: 1.18;
+
     letter-spacing: 0.02em;
     transition: color 250ms var(--time-func);
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.14;
+    }
   }
   & .link:hover,
   & .link:focus {
@@ -34,32 +77,54 @@
   & .link.current {
     color: var(--accent-color);
     transition: filter 250ms var(--time-func);
-
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    @media screen and (min-width: 768px) {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
   }
 }
 
 .current.link::after {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 4px;
-  bottom: -1px;
-  left: 0;
-  background: var(--accent-color);
-  border-radius: 2px;
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    bottom: -1px;
+    left: 0;
+    background: var(--accent-color);
+    border-radius: 2px;
+  }
 }
 /* Контакты в шапке */
 
 .header-contact__link {
   list-style: none;
   display: flex;
+  flex-direction: column-reverse;
   margin-left: auto;
+  margin-top: 306px;
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 1.14;
+    margin-top: 0px;
+    margin-left: 84px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+  }
+
   & .link {
     color: var(--title-text-color);
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 28px;
+
+    line-height: 1.18;
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.14;
+    }
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
     transition: color 250ms var(--time-func);
@@ -67,21 +132,48 @@
   & .link:hover,
   & .link:focus {
     color: var(--accent-color);
+    font-size: 40px;
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.14;
+    }
   }
-}
-
-.connect-item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .connect-item__all {
   display: block;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
   display: flex;
   fill: currentColor;
 }
 .icon-picture {
+  display: none;
   margin-right: 10px;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+.social-mobile-list {
+  margin-top: 32px;
+  display: flex;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.social-mobile-link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+
+  letter-spacing: 0.02em;
+
+  color: var(--accent-color);
+}
+
+.social-mobile-item:not(:last-child) {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }

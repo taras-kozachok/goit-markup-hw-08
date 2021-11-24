@@ -1,9 +1,12 @@
 .logo-name__header {
   text-decoration: none;
   color: var(--primary-black-color);
-  margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  // margin-right: 93px;
+  // padding-top: 24px;
+  // padding-bottom: 25px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 88px;
+  }
 }
 
 .logo-name__footer {
@@ -32,6 +35,9 @@
 }
 
 .menu {
+  position: absolute;
+  right: 0;
+  z-index: 100;
   display: inline-flex;
   margin: 0;
   padding: 0;
@@ -43,12 +49,13 @@
   &:hover .icon-close,
   &:hover .icon-menu &:focus .icon-close,
   &:focus .icon-menu {
-    fill: $link-color;
+    fill: var(--accent-color);
   }
   @media screen and (min-width: 768px) {
     display: none;
   }
 }
+
 .menu .icon-close {
   display: none;
 }
@@ -57,4 +64,27 @@
 }
 .menu.is-open .icon-menu {
   display: none;
+}
+.navigation-menu {
+  @media screen and (max-width: 767px) {
+    display: none;
+    z-index: 10;
+    padding: 48px 40px;
+    background-color: #fff;
+
+    position: absolute;
+    content: '';
+    text-align: center;
+    display: none;
+    width: 100%;
+    top: 0;
+    left: 0;
+    &.navigation-menu.is-open {
+      display: block;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
 }
