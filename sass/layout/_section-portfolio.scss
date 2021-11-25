@@ -14,17 +14,35 @@
 }
 .menu-partfolio {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .item-filtr:not(:last-child) {
   margin-right: 8px;
 }
 
+// @media screen and (min-width: 768px) .item-filtr:not(:last-child) :nth-child(-n+3) {
+//   margin-bottom: 0;
+// }
+
+.item-filtr:not(:last-child) :nth-child(-n + 3) {
+  margin-bottom: 15 px;
+}
+
 .section-portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .portfolio-item-descrip {
@@ -38,17 +56,29 @@
 }
 
 .portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-bottom: -30px;
+  @media screen and (min-width: 768px) {
+    // margin: -15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: -30px;
+    padding-bottom: 60px;
+  }
 }
 .item-portfolio {
-  width: calc(100% / 3 - 30px);
-  margin-left: 30px;
+  width: calc(100% / 1 - 30px);
+  // margin-left: 30px;
   margin-bottom: 30px;
   &:hover .overlay-box {
     transform: translateY(0%);
+  }
+  @media screen and (min-width: 768px) {
+    width: calc(100% / 2 - 30px);
+    margin: 15px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc(100% / 3 - 30px);
   }
 }
 
@@ -94,4 +124,8 @@
 
 .button-filtr {
   padding: 6px 22px;
+  margin-bottom: 15px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
 }

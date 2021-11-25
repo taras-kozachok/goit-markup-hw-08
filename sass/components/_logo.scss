@@ -12,23 +12,30 @@
 .logo-name__footer {
   color: var(--primary-white-color);
   display: inline-block;
-  margin-bottom: 20px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 20px;
+  }
 }
 .logo-name {
   font-family: var(--secondary-font);
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   transition: color 250ms var(--time-func);
   &:hover {
     color: var(--accent-color);
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
   }
 }
 .logo-web {
   color: var(--accent-color);
 }
 .logo-mobmenu-block {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;

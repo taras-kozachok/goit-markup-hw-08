@@ -24,42 +24,89 @@
     <!--Шапка-->
     <header class="header">
       <div class="container header__container">
-        <nav class="header__nav">
-          <a class="logo-name logo-name__header" href="./index.html">
+        <div class="logo-mobmenu-block">
+          <a class="logo-name__header logo-name" href="./index.html">
             <span class="logo-web">Web</span>Studio</a
           >
-          <ul class="header__nav list">
-            <li class="header-menu__item">
-              <a href="./index.html" class="link connect-item__all">Студия </a>
-            </li>
-            <li class="header-menu__item">
-              <a href="./portfolio.html" class="link connect-item__all current"
-                >Портфолио</a
+          <button
+            type="button"
+            class="menu"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg
+              height="40"
+              width="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use
+                class="icon-menu"
+                href="./images/icons.svg#icon-menu_40px-1"
+              ></use>
+              <use
+                class="icon-close"
+                href="./images/icons.svg#icon-close_40px"
+              ></use>
+            </svg>
+          </button>
+        </div>
+        <div class="navigation-menu" data-menu>
+          <nav class="header-nav__cont">
+            <ul class="header__nav list">
+              <li class="header-menu__item">
+                <a href="./index.html" class="link connect-item__all nav-link"
+                  >Студия
+                </a>
+              </li>
+              <li class="header-menu__item">
+                <a
+                  href="./portfolio.html"
+                  class="link connect-item__all nav-link current"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="header-menu__item">
+                <a href="" class="link connect-item__all nav-link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="header-contact__link list">
+            <li class="connect-item">
+              <a href="mailto:info@devstudio.com" class="link connect-item__all"
+                ><svg width="16px" height="16px" class="icon-picture">
+                  <use href="./images/icons.svg#icon-cont_envelope"></use>
+                </svg>
+                info@devstudio.com</a
               >
             </li>
-            <li class="header-menu__item">
-              <a href="" class="link connect-item__all">Контакты</a>
+            <li class="connect-item">
+              <a
+                href="tel:+380961111111"
+                class="connect-item-phone link connect-item__all"
+              >
+                <svg width="16px" height="16px" class="icon-picture">
+                  <use href="./images/icons.svg#icon-cont_smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="header-contact__link list">
-          <li class="connect-item">
-            <a href="mailto:info@devstudio.com" class="link connect-item__all"
-              ><svg width="16px" height="16px" class="icon-picture">
-                <use href="./images/icons.svg#icon-cont_envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="connect-item">
-            <a href="tel:+380961111111" class="link connect-item__all">
-              <svg width="16px" height="16px" class="icon-picture">
-                <use href="./images/icons.svg#icon-cont_smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="social-mobile-list list">
+            <li class="social-mobile-item">
+              <a class="social-mobile-link link" href="">Instagram</a>
+            </li>
+            <li class="social-mobile-item">
+              <a class="social-mobile-link link" href="">Twiter</a>
+            </li>
+            <li class="social-mobile-item">
+              <a class="social-mobile-link link" href="">Facebook</a>
+            </li>
+            <li class="social-mobile-item">
+              <a class="social-mobile-link link" href="">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -104,12 +151,45 @@
                       конкурентов.
                     </p>
                   </div>
-                  <img
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/sample1/portfolio_sample1_d.jpg    1x,
+                        ./images/sample1/portfolio_sample1_d@2x.jpg 2x,
+                        ./images/sample1/portfolio_sample1_d.webp   1x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/sample1/portfolio_sample1_t.jpg    1x,
+                        ./images/sample1/portfolio_sample1_t@2x.jpg 2x,
+                        ./images/sample1/portfolio_sample1_t.webp   1x
+                      "
+                      media="(min-width:768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/sample1/portfolio_sample1_m.jpg    1x,
+                        ./images/sample1/portfolio_sample1_m@2x.jpg 2x,
+                        ./images/sample1/portfolio_sample1_m.webp   1x
+                      "
+                      media="(min-width:480px)"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/sample1/portfolio_sample1_m.jpg"
+                      alt="ноутбук"
+                    />
+                  </picture>
+                  <!-- <img
                     class="image-item"
                     src="./images/port-01.jpg"
                     alt="Ноутбук"
                     width="370"
-                  />
+                  /> -->
                 </div>
                 <div class="portfolio-item-descrip">
                   <h2 class="title">Технокряк</h2>
@@ -128,12 +208,45 @@
                       конкурентов.
                     </p>
                   </div>
-                  <img
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/sample2/portfolio_sample2_d.jpg    1x,
+                        ./images/sample2/portfolio_sample2_d@2x.jpg 2x,
+                        ./images/sample2/portfolio_sample2_d.webp   1x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/sample2/portfolio_sample2_t.jpg    1x,
+                        ./images/sample2/portfolio_sample2_t@2x.jpg 2x,
+                        ./images/sample2/portfolio_sample2_t.webp   1x
+                      "
+                      media="(min-width:768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/sample2/portfolio_sample2_m.jpg    1x,
+                        ./images/sample2/portfolio_sample2_m@2x.jpg 2x,
+                        ./images/sample2/portfolio_sample2_m.webp   1x
+                      "
+                      media="(min-width:480px)"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/sample2/portfolio_sample2_m.jpg"
+                      alt="ноутбук"
+                    />
+                  </picture>
+                  <!-- <img
                     class="image-item"
                     src="./images/port-02.jpg"
                     alt="Баскетболисты"
                     width="370"
-                  />
+                  /> -->
                 </div>
                 <div class="portfolio-item-descrip">
                   <h2 class="title">Постер New Orlean vs Golden Star</h2>
@@ -153,12 +266,45 @@
                       конкурентов.
                     </p>
                   </div>
-                  <img
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/sample3/portfolio_sample3_d.jpg    1x,
+                        ./images/sample3/portfolio_sample3_d@2x.jpg 2x,
+                        ./images/sample3/portfolio_sample3_d.webp   1x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/sample3/portfolio_sample3_t.jpg    1x,
+                        ./images/sample3/portfolio_sample3_t@2x.jpg 2x,
+                        ./images/sample3/portfolio_sample3_t.webp   1x
+                      "
+                      media="(min-width:768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/sample3/portfolio_sample3_m.jpg    1x,
+                        ./images/sample3/portfolio_sample3_m@2x.jpg 2x,
+                        ./images/sample3/portfolio_sample3_m.webp   1x
+                      "
+                      media="(min-width:480px)"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/sample3/portfolio_sample3_m.jpg"
+                      alt="ноутбук"
+                    />
+                  </picture>
+                  <!-- <img
                     class="image-item"
                     src="./images/port-03.jpg"
                     alt="Лого ресторана"
                     width="370"
-                  />
+                  /> -->
                 </div>
                 <div class="portfolio-item-descrip">
                   <h2 class="title">Ресторан Seafood</h2>
@@ -177,12 +323,45 @@
                       конкурентов.
                     </p>
                   </div>
-                  <img
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/sample4/portfolio_sample4_d.jpg    1x,
+                        ./images/sample4/portfolio_sample4_d@2x.jpg 2x,
+                        ./images/sample4/portfolio_sample4_d.webp   1x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/sample4/portfolio_sample4_t.jpg    1x,
+                        ./images/sample4/portfolio_sample4_t@2x.jpg 2x,
+                        ./images/sample4/portfolio_sample4_t.webp   1x
+                      "
+                      media="(min-width:768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/sample4/portfolio_sample4_m.jpg    1x,
+                        ./images/sample4/portfolio_sample4_m@2x.jpg 2x,
+                        ./images/sample4/portfolio_sample4_m.webp   1x
+                      "
+                      media="(min-width:480px)"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/sample4/portfolio_sample4_m.jpg"
+                      alt="ноутбук"
+                    />
+                  </picture>
+                  <!-- <img
                     class="image-item"
                     src="./images/port-04.jpg"
                     alt="Наушники"
                     width="370"
-                  />
+                  /> -->
                 </div>
                 <div class="portfolio-item-descrip">
                   <h2 class="title">Проект Prime</h2>
@@ -201,12 +380,45 @@
                       конкурентов.
                     </p>
                   </div>
-                  <img
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/sample5/portfolio_sample5_d.jpg    1x,
+                        ./images/sample5/portfolio_sample5_d@2x.jpg 2x,
+                        ./images/sample5/portfolio_sample5_d.webp   1x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/sample5/portfolio_sample5_t.jpg    1x,
+                        ./images/sample5/portfolio_sample5_t@2x.jpg 2x,
+                        ./images/sample5/portfolio_sample5_t.webp   1x
+                      "
+                      media="(min-width:768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/sample5/portfolio_sample5_m.jpg    1x,
+                        ./images/sample5/portfolio_sample5_m@2x.jpg 2x,
+                        ./images/sample5/portfolio_sample5_m.webp   1x
+                      "
+                      media="(min-width:480px)"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/sample5/portfolio_sample5_m.jpg"
+                      alt="ноутбук"
+                    />
+                  </picture>
+                  <!-- <img
                     class="image-item"
                     src="./images/port-05.jpg"
                     alt="Коробки"
                     width="370"
-                  />
+                  /> -->
                 </div>
                 <div class="portfolio-item-descrip">
                   <h2 class="title">Проект Boxes</h2>
@@ -225,12 +437,45 @@
                       конкурентов.
                     </p>
                   </div>
-                  <img
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/sample6/portfolio_sample6_d.jpg    1x,
+                        ./images/sample6/portfolio_sample6_d@2x.jpg 2x,
+                        ./images/sample6/portfolio_sample6_d.webp   1x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/sample6/portfolio_sample6_t.jpg    1x,
+                        ./images/sample6/portfolio_sample6_t@2x.jpg 2x,
+                        ./images/sample6/portfolio_sample6_t.webp   1x
+                      "
+                      media="(min-width:768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/sample6/portfolio_sample6_m.jpg    1x,
+                        ./images/sample6/portfolio_sample6_m@2x.jpg 2x,
+                        ./images/sample6/portfolio_sample6_m.webp   1x
+                      "
+                      media="(min-width:480px)"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/sample6/portfolio_sample6_m.jpg"
+                      alt="ноутбук"
+                    />
+                  </picture>
+                  <!-- <img
                     class="image-item"
                     src="./images/port-06.jpg"
                     alt="Монитор"
                     width="370"
-                  />
+                  /> -->
                 </div>
                 <div class="portfolio-item-descrip">
                   <h2 class="title">Inspiration has no Borders</h2>
@@ -249,12 +494,45 @@
                       конкурентов.
                     </p>
                   </div>
-                  <img
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/sample7/portfolio_sample7_d.jpg    1x,
+                        ./images/sample7/portfolio_sample7_d@2x.jpg 2x,
+                        ./images/sample7/portfolio_sample7_d.webp   1x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/sample7/portfolio_sample7_t.jpg    1x,
+                        ./images/sample7/portfolio_sample7_t@2x.jpg 2x,
+                        ./images/sample7/portfolio_sample7_t.webp   1x
+                      "
+                      media="(min-width:768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/sample7/portfolio_sample7_m.jpg    1x,
+                        ./images/sample7/portfolio_sample7_m@2x.jpg 2x,
+                        ./images/sample7/portfolio_sample7_m.webp   1x
+                      "
+                      media="(min-width:480px)"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/sample7/portfolio_sample7_m.jpg"
+                      alt="ноутбук"
+                    />
+                  </picture>
+                  <!-- <img
                     class="image-item"
                     src="./images/port-07.jpg"
                     alt="Развернутая книга"
                     width="370"
-                  />
+                  /> -->
                 </div>
                 <div class="portfolio-item-descrip">
                   <h2 class="title">Издание Limited Edition</h2>
@@ -273,12 +551,45 @@
                       конкурентов.
                     </p>
                   </div>
-                  <img
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/sample8/portfolio_sample8_d.jpg    1x,
+                        ./images/sample8/portfolio_sample8_d@2x.jpg 2x,
+                        ./images/sample8/portfolio_sample8_d.webp   1x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/sample8/portfolio_sample8_t.jpg    1x,
+                        ./images/sample8/portfolio_sample8_t@2x.jpg 2x,
+                        ./images/sample8/portfolio_sample8_t.webp   1x
+                      "
+                      media="(min-width:768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/sample8/portfolio_sample8_m.jpg    1x,
+                        ./images/sample8/portfolio_sample8_m@2x.jpg 2x,
+                        ./images/sample8/portfolio_sample8_m.webp   1x
+                      "
+                      media="(min-width:480px)"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/sample8/portfolio_sample8_m.jpg"
+                      alt="ноутбук"
+                    />
+                  </picture>
+                  <!-- <img
                     class="image-item"
                     src="./images/port-08.jpg"
                     alt="Бирка"
                     width="370"
-                  />
+                  /> -->
                 </div>
                 <div class="portfolio-item-descrip">
                   <h2 class="title">Проект LAB</h2>
@@ -297,12 +608,45 @@
                       конкурентов.
                     </p>
                   </div>
-                  <img
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/sample9/portfolio_sample9_d.jpg    1x,
+                        ./images/sample9/portfolio_sample9_d@2x.jpg 2x,
+                        ./images/sample9/portfolio_sample9_d.webp   1x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/sample9/portfolio_sample9_t.jpg    1x,
+                        ./images/sample9/portfolio_sample9_t@2x.jpg 2x,
+                        ./images/sample9/portfolio_sample9_t.webp   1x
+                      "
+                      media="(min-width:768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/sample9/portfolio_sample9_m.jpg    1x,
+                        ./images/sample9/portfolio_sample9_m@2x.jpg 2x,
+                        ./images/sample9/portfolio_sample9_m.webp   1x
+                      "
+                      media="(min-width:480px)"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/sample9/portfolio_sample9_m.jpg"
+                      alt="ноутбук"
+                    />
+                  </picture>
+                  <!-- <img
                     class="image-item"
                     src="./images/port-09.jpg"
                     alt="Открытый ноутбук"
                     width="370"
-                  />
+                  /> -->
                 </div>
                 <div class="portfolio-item-descrip">
                   <h2 class="title">Growing Business</h2>
@@ -317,59 +661,62 @@
     <!--Футер-->
     <footer class="footer">
       <div class="container container-bottom">
-        <div class="bottom-left">
-          <a class="logo-name logo-name__footer link" href="./index.html">
-            <span class="logo-web">Web</span>Studio</a
-          >
-          <address class="footer-adress">
-            <ul class="footer-list">
-              <li class="item-contacts">г. Киев, пр-т Леси Украинки, 26</li>
-              <li class="item-contacts">
-                <a href="mailto:info@example.com" class="footer-link"
-                  >info@example.com</a
-                >
+        <div class="contact-social-wraper">
+          <div class="bottom-left">
+            <a class="logo-name__footer link logo-name" href="./index.html">
+              <span class="logo-web">Web</span>Studio</a
+            >
+            <address class="footer-adress">
+              <ul class="footer-list">
+                <li class="item-contacts">г. Киев, пр-т Леси Украинки, 26</li>
+                <li class="item-contacts">
+                  <a href="mailto:info@example.com" class="footer-link"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="item-contacts">
+                  <a href="tel:+380991111111" class="footer-link"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="links">
+            <p class="bottom-title">Присоединяйтесь</p>
+            <ul class="bottom-icon-list">
+              <li class="bottom-icon-list-item list">
+                <a class="icon-link link" href="">
+                  <svg class="item-bottom icon" width="20px" height="20px">
+                    <use href="./images/icons.svg#icon-s_instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="item-contacts">
-                <a href="tel:+380991111111" class="footer-link"
-                  >+38 099 111 11 11</a
-                >
+              <li class="bottom-icon-list-item list">
+                <a class="icon-link link" href="">
+                  <svg class="item-bottom icon" width="20px" height="20px">
+                    <use href="./images/icons.svg#icon-s_twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="bottom-icon-list-item list">
+                <a class="icon-link link" href="">
+                  <svg class="item-bottom icon" width="20px" height="20px">
+                    <use href="./images/icons.svg#icon-s_facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="bottom-icon-list-item list">
+                <a class="icon-link link" href="">
+                  <svg class="item-bottom icon" width="20px" height="20px">
+                    <use href="./images/icons.svg#icon-s_linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
+          </div>
         </div>
-        <div class="links">
-          <p class="bottom-title">Присоединяйтесь</p>
-          <ul class="bottom-icon-list">
-            <li class="bottom-icon-list-item list">
-              <a class="icon-link link" href="">
-                <svg class="item-bottom icon" width="20px" height="20px">
-                  <use href="./images/icons.svg#icon-s_instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="bottom-icon-list-item list">
-              <a class="icon-link link" href="">
-                <svg class="item-bottom icon" width="20px" height="20px">
-                  <use href="./images/icons.svg#icon-s_twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="bottom-icon-list-item list">
-              <a class="icon-link link" href="">
-                <svg class="item-bottom icon" width="20px" height="20px">
-                  <use href="./images/icons.svg#icon-s_facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="bottom-icon-list-item list">
-              <a class="icon-link link" href="">
-                <svg class="item-bottom icon" width="20px" height="20px">
-                  <use href="./images/icons.svg#icon-s_linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+
         <div class="form-footer">
           <p class="bottom-title">Подпишитесь на рассылку</p>
           <form class="form-subscribe" action="#">
@@ -393,5 +740,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

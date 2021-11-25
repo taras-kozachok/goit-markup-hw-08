@@ -19,12 +19,12 @@
     margin-bottom: 0px;
   }
 }
-.header-menu__item {
-  @media screen and (min-width: 768px) {
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
-}
+// .header-menu__item {
+//   @media screen and (min-width: 768px) {
+//     padding-top: 32px;
+//     padding-bottom: 32px;
+//   }
+// }
 
 .header__container {
   @media screen and (min-width: 768px) {
@@ -42,6 +42,12 @@
   margin-bottom: 32px;
   @media screen and (min-width: 768px) {
     margin-bottom: 0px;
+  }
+}
+.nav-link {
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 .connect-item:not(:last-child) {
@@ -108,7 +114,7 @@
     font-size: 14px;
     line-height: 1.14;
     margin-top: 0px;
-    margin-left: 84px;
+    margin-left: 50px;
   }
   @media screen and (min-width: 1200px) {
     display: flex;

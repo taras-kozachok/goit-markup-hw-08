@@ -1,14 +1,20 @@
 /* Контакты в футере */
-footer {
-  background-color: var(--footer-bcg-color);
-}
+
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  flex-direction: column;
+  padding: 60px 0;
+  background-color: var(--footer-bcg-color);
+  margin: 0 auto;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 }
 .container-bottom {
-  display: flex;
-  align-items: baseline;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    // align-items: baseline;
+  }
 }
 .item-contacts:not(:last-child) {
   margin-bottom: 9px;
@@ -17,8 +23,14 @@ footer {
   transition: color 250ms var(--time-func);
 }
 .bottom-left {
-  width: 231px;
-  margin-right: 70px;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    margin-right: 165px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 231px;
+    margin-right: 70px;
+  }
 }
 .footer-list {
   list-style: none;
@@ -35,9 +47,32 @@ footer {
 }
 
 .footer-adress {
+  margin-top: 20px;
+  margin-bottom: 60px;
   font-style: inherit;
   font-size: 14px;
   letter-spacing: 0.03em;
+  :not(:last-child) {
+    margin-bottom: 8px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.links {
+  @media screen and (max-width: 767px) {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+}
+
+.contact-social-wraper {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .bottom-title {
@@ -53,6 +88,7 @@ footer {
 
 .bottom-icon-list {
   display: flex;
+  justify-content: center;
 }
 .item-bottom {
   fill: var(--primary-white-color);
@@ -84,14 +120,25 @@ footer {
 }
 
 .form-footer {
-  width: 570px;
-  height: 86px;
-  margin-left: 93px;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    width: 570px;
+    height: 86px;
+    margin-left: 93px;
+  }
 }
 .form-subscribe {
-  display: flex;
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 .input-subscribe {
+  margin-bottom: 20px;
   padding-left: 16px;
   position: relative;
   width: 358px;
