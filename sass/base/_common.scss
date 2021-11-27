@@ -3,6 +3,11 @@ body {
   color: var(--primary-text-color);
   font-family: var(--maine-font);
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 p,
 h1,
 h2,
@@ -21,6 +26,12 @@ ul {
 .container {
   padding: 0 15px;
   margin: 0 auto;
+  min-width: 320px;
+}
+@media screen and (max-width: 479px) {
+  .container {
+    max-width: 480px;
+  }
 }
 @media screen and (min-width: 480px) {
   .container {

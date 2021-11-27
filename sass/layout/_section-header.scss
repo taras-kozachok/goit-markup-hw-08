@@ -10,13 +10,20 @@
 
 .header-nav__cont {
   display: flex;
-  align-items: center;
+  flex-grow: 1;
+  @media screen and (min-width: 1200px) {
+    margin-right: 205px;
+  }
+}
+
+.header-menu__item {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
+  }
 }
 .header-menu__item:not(:last-child) {
-  margin-bottom: 32px;
   @media screen and (min-width: 768px) {
     margin-right: 50px;
-    margin-bottom: 0px;
   }
 }
 
@@ -28,25 +35,28 @@
   }
   @media screen and (min-width: 1200px) {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 }
 
-.connect-item {
-  margin-bottom: 32px;
-  @media screen and (min-width: 768px) {
-    margin-bottom: 0px;
-  }
-}
 .nav-link {
   @media screen and (min-width: 768px) {
     padding-top: 32px;
     padding-bottom: 32px;
   }
 }
+.connect-item:last-child > .connect-item-phone {
+  @media screen and (max-width: 767px) {
+    color: var(--accent-color);
+    font-size: 40px;
+  }
+}
+
 .connect-item:not(:last-child) {
+  margin-top: 32px;
   @media screen and (min-width: 768px) {
     margin-bottom: 10px;
+    margin-top: 0;
   }
   @media screen and (min-width: 1200px) {
     margin-right: 50px;
@@ -101,8 +111,7 @@
   list-style: none;
   display: flex;
   flex-direction: column-reverse;
-  margin-left: auto;
-  margin-top: 306px;
+  // margin-left: auto;
   @media screen and (min-width: 768px) {
     flex-direction: column;
     font-size: 14px;
@@ -132,11 +141,6 @@
   & .link:hover,
   & .link:focus {
     color: var(--accent-color);
-    font-size: 40px;
-    @media screen and (min-width: 768px) {
-      font-size: 14px;
-      line-height: 1.14;
-    }
   }
 }
 
@@ -154,8 +158,9 @@
   }
 }
 .social-mobile-list {
-  margin-top: 32px;
+  margin-top: 64px;
   display: flex;
+  flex-wrap: wrap;
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -174,6 +179,7 @@
 
 .social-mobile-item:not(:last-child) {
   margin-right: 10px;
+  margin-bottom: 10px;
   padding-right: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }

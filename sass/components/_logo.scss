@@ -1,9 +1,6 @@
 .logo-name__header {
   text-decoration: none;
   color: var(--primary-black-color);
-  // margin-right: 93px;
-  // padding-top: 24px;
-  // padding-bottom: 25px;
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     margin-right: 88px;
   }
@@ -38,7 +35,10 @@
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 
 .menu {
@@ -72,22 +72,29 @@
 .menu.is-open .icon-menu {
   display: none;
 }
+.menu.is-open {
+  position: fixed;
+  right: 10px;
+}
 .navigation-menu {
   @media screen and (max-width: 767px) {
-    display: none;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    // display: none;
+    transform: translateX(100%);
+    transition: transform 250ms var(--time-func);
     z-index: 10;
     padding: 48px 40px;
     background-color: #fff;
-
-    position: absolute;
-    content: '';
     text-align: center;
-    display: none;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     top: 0;
     left: 0;
     &.navigation-menu.is-open {
-      display: block;
+      transform: translateX(0%);
+      overflow-y: auto;
     }
   }
   @media screen and (min-width: 768px) {

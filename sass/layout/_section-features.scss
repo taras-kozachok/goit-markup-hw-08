@@ -1,5 +1,8 @@
 /* section features */
 .section-features .features-title {
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 14px;
@@ -15,35 +18,32 @@
 }
 .section-features {
   padding: 60px 0;
-  min-width: 320px;
   margin: 0 auto;
-
-  // padding-top: 94px;
-  // padding-bottom: 94px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .list-features {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   @media screen and (min-width: 768px) {
-    flex-direction: row;
+    display: flex;
     flex-wrap: wrap;
+    margin: -15px;
   }
 }
 .features-item {
-  margin-bottom: 30px;
-
-  @media screen and (min-width: 768px) {
-    width: 354px;
-    &:nth-child(odd) {
-      margin-right: 30px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
     }
   }
+
+  @media screen and (min-width: 768px) {
+    max-width: calc(100% / 2 - 30px);
+    margin: 15px;
+  }
   @media screen and (min-width: 1200px) {
-    width: 270px;
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
+    max-width: calc(100% / 4 - 30px);
   }
 }
 
@@ -52,8 +52,6 @@
   align-items: center;
   justify-content: center;
   height: 120px;
-  width: 100%;
-  // width: 270px;
   margin-bottom: 30px;
   background-color: var(--secondary-bcg-color);
   border-radius: 4px;
