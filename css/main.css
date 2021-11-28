@@ -154,7 +154,12 @@ ul {
   padding: 60px 0;
   background-color: var(--footer-bcg-color);
   margin: 0 auto;
-  text-align: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer {
+    text-align: center;
+  }
 }
 
 .item-contacts:not(:last-child) {
