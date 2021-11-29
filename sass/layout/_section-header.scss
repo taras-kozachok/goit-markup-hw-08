@@ -60,6 +60,11 @@
     margin-top: 0;
   }
 }
+.header-menu__item .connect-item__all {
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+  }
+}
 .connect-item__all {
   @media screen and (min-width: 768px) {
     padding-top: 21px;
