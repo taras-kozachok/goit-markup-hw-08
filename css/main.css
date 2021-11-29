@@ -1320,8 +1320,10 @@ button.secondery {
   }
 }
 
-.connect-item:not(:last-child) {
-  margin-top: 32px;
+@media screen and (max-width: 767px) {
+  .connect-item-phone {
+    padding-bottom: 32px;
+  }
 }
 
 @media screen and (max-width: 1199px) {
