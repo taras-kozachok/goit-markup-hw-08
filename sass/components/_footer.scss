@@ -30,7 +30,7 @@
 }
 
 .footer-adress {
-  margin-top: 20px;
+  // margin-top: 20px;
   margin-bottom: 60px;
   font-style: inherit;
   font-size: 14px;
@@ -110,9 +110,8 @@
 .form-footer {
   text-align: center;
   @media screen and (min-width: 1200px) {
-    // width: 570px;
+    text-align: start;
     height: 86px;
-    // margin-left: 93px;
   }
 }
 .form-subscribe {

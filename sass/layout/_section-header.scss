@@ -11,9 +11,6 @@
 .header-nav__cont {
   display: flex;
   flex-grow: 1;
-  @media screen and (min-width: 1200px) {
-    margin-right: 205px;
-  }
 }
 
 .header-menu__item {
@@ -30,7 +27,7 @@
 .header__container {
   @media screen and (min-width: 768px) {
     display: flex;
-
+    justify-content: space-between;
     align-items: center;
   }
   @media screen and (min-width: 1200px) {
@@ -54,18 +51,26 @@
 
 .connect-item:not(:last-child) {
   margin-top: 32px;
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 1199px) {
+    padding-top: 21px;
     margin-bottom: 10px;
     margin-top: 0;
   }
   @media screen and (min-width: 1200px) {
-    margin-right: 50px;
-    margin-bottom: 0;
+    margin-right: 30px;
+    margin-top: 0;
+  }
+}
+.connect-item:not(:first-child) {
+  @media screen and (max-width: 1199px) {
+    padding-bottom: 21px;
   }
 }
 .header__nav {
   @media screen and (min-width: 768px) {
     display: flex;
+    flex-grow: 1;
+    justify-content: center;
   }
   & .link {
     font-size: 40px;
@@ -111,13 +116,11 @@
   list-style: none;
   display: flex;
   flex-direction: column-reverse;
-  // margin-left: auto;
   @media screen and (min-width: 768px) {
     flex-direction: column;
     font-size: 14px;
     line-height: 1.14;
     margin-top: 0px;
-    margin-left: 50px;
   }
   @media screen and (min-width: 1200px) {
     display: flex;
@@ -149,6 +152,9 @@
   align-items: center;
   display: flex;
   fill: currentColor;
+  @media screen and (min-width: 1200px) {
+    padding: 32px 0;
+  }
 }
 .icon-picture {
   display: none;
